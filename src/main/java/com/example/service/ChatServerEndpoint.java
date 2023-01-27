@@ -43,7 +43,9 @@ public class ChatServerEndpoint {
         //当前的Session 移除
         ONLINE_USER_SESSIONS.remove(username);
         //并且通知其他人当前用户已经离开聊天室了
-        sendMessageAll("用户[" + username + "] 已经离开聊天室了！");
+        String message="用户[" + username + "] 已经离开聊天室了！";
+        sendMessageAll(message);
+        log.info("发送消息："+message);
         try {
             session.close();
         } catch (IOException e) {

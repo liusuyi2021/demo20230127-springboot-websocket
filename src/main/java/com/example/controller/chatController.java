@@ -1,7 +1,6 @@
 package com.example.controller;
-
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @ClassName chatController
@@ -10,10 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date 2023/1/27 7:51
  * @Version 1.0
  */
-@Controller
+@RestController
 public class chatController {
+
     @RequestMapping("/")
-    String chat()
+    String chatServerEndpoint()
     {
         return "chat";
     }

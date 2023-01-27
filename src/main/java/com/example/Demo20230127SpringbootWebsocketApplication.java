@@ -13,8 +13,5 @@ public class Demo20230127SpringbootWebsocketApplication {
     public static void main(String[] args) {
         SpringApplication.run(Demo20230127SpringbootWebsocketApplication.class, args);
     }
-    @Bean
-    public ServerEndpointExporter serverEndpointExporter() {
-        return new ServerEndpointExporter();
-    }
+
 }

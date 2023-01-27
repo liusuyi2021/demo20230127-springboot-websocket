@@ -1,7 +1,7 @@
 package com.example.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
@@ -19,9 +19,9 @@ import static com.example.util.WebSocketUtils.sendMessageAll;
  * @Version 1.0
  */
 
-@RestController
-@ServerEndpoint("/chat/{username}")
+@Service
 @Slf4j
+@ServerEndpoint("/chat/{username}")
 public class ChatServerEndpoint {
 
     @OnOpen
